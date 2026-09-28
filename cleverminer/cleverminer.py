@@ -22,7 +22,7 @@ import os
 import urllib
 
 class cleverminer:
-    version_string = '1.2.7'
+    version_string = '1.2.8'
     temppath = tempfile.gettempdir()
     cache_dir = os.path.join(temppath, 'clm_cache')
 
@@ -202,7 +202,7 @@ class cleverminer:
         if 'max_categories' in OO0000O0OO0O:
             O00O0000000.options['max_categories'] = OO0000O0OO0O['max_categories']
             if O00O0000000.verbosity['debug'] == True:
-                print(f'Maximum number of categories set to {O00O0000000.options['max_categories']}')
+                print(f"Maximum number of categories set to {O00O0000000.options['max_categories']}")
         if 'no_automatic_data_conversions' in OO0000O0OO0O:
             O00O0000000.options['automatic_data_conversions'] = not OO0000O0OO0O['no_automatic_data_conversions']
             print('No automatic data conversions will be made.')
@@ -434,10 +434,10 @@ class cleverminer:
             OOOO000OOO.data['dm'].append(OOOO00OOOO)
         print('Encoding columns into bit-form...done')
         if OOOO000OOO.verbosity['hint']:
-            print(f'List of attributes for analysis is: {OOOO000OOO.data['varname']}')
-            print(f'List of category names for individual attributes is : {OOOO000OOO.data['catnames']}')
+            print(f"List of attributes for analysis is: {OOOO000OOO.data['varname']}")
+            print(f"List of category names for individual attributes is : {OOOO000OOO.data['catnames']}")
         if OOOO000OOO.verbosity['debug']:
-            print(f'List of vtypes is (all should be 1) : {OOOO000OOO.data['vtypes']}')
+            print(f"List of vtypes is (all should be 1) : {OOOO000OOO.data['vtypes']}")
         OOOO000OOO.data['data_prepared'] = 1
         print('Data preparation finished.')
         if OOOO000OOO.verbosity['debug']:
@@ -1072,11 +1072,11 @@ class cleverminer:
             OOO0O000OOO0O['trace_cedent'] = copy.deepcopy(OOO0000O00OOO)
             OOO0O000OOO0O['trace_cedent_asindata'] = copy.deepcopy(OO0OO000O0O)
             if OOO0O0O0OO.verbosity['debug']:
-                print(f'TC :{OOO0O000OOO0O['trace_cedent_asindata']}')
+                print(f"TC :{OOO0O000OOO0O['trace_cedent_asindata']}")
             OO0OO0O00OO['cedents'].append(OOO0O000OOO0O)
             OOOOOOO0OOO00 = OOO0O0O0OO._verify_opt(OO0OO0O00OO, OOO0O000OOO0O)
             if OOO0O0O0OO.verbosity['debug']:
-                print(f'DEBUG: {OOO0O000OOO0O['generated_string']}.')
+                print(f"DEBUG: {OOO0O000OOO0O['generated_string']}.")
                 print(f'DEBUG: {OOO0000O00OOO},{OOOOOOO0OOO}.')
                 if OOOOOOO0OOO00:
                     print('DEBUG: Optimization: cutting')
@@ -1183,7 +1183,7 @@ class cleverminer:
                 O000O00000 = False
                 return O000O00000
             if not type(O00OOO00OO0OO.get('minlen')) is int:
-                print(f'Error: cedent {O00O00OOO000} has invalid type of minimal length ({type(O00OOO00OO0OO.get('minlen'))}).')
+                print(f"Error: cedent {O00O00OOO000} has invalid type of minimal length ({type(O00OOO00OO0OO.get('minlen'))}).")
                 O000O00000 = False
                 return O000O00000
             if (O00OOO00OO0OO.get('maxlen'), None) == None:
@@ -1212,7 +1212,7 @@ class cleverminer:
                     O000O00000 = False
                     return O000O00000
                 if not OOOOOOOO0OOO0.get('name') in OOO0000OOO.data['varname']:
-                    print(f'Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} not in variable list. Please check spelling.')
+                    print(f"Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} not in variable list. Please check spelling.")
                     O000O00000 = False
                     return O000O00000
                 if (OOOOOOOO0OOO0.get('type'), None) == None:
@@ -1224,21 +1224,21 @@ class cleverminer:
                     O000O00000 = False
                     return O000O00000
                 if (OOOOOOOO0OOO0.get('minlen'), None) == None:
-                    print(f'Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has no minimal length specified.')
+                    print(f"Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has no minimal length specified.")
                     O000O00000 = False
                     return O000O00000
                 if not type(OOOOOOOO0OOO0.get('minlen')) is int:
                     if not (OOOOOOOO0OOO0.get('type') == 'one' or OOOOOOOO0OOO0.get('type') == 'list'):
-                        print(f'Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has invalid type of minimal length.')
+                        print(f"Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has invalid type of minimal length.")
                         O000O00000 = False
                         return O000O00000
                 if (OOOOOOOO0OOO0.get('maxlen'), None) == None:
-                    print(f'Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has no maximal length specified.')
+                    print(f"Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has no maximal length specified.")
                     O000O00000 = False
                     return O000O00000
                 if not type(OOOOOOOO0OOO0.get('maxlen')) is int:
                     if not (OOOOOOOO0OOO0.get('type') == 'one' or OOOOOOOO0OOO0.get('type') == 'list'):
-                        print(f'Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has invalid type of maximal length.')
+                        print(f"Error: cedent {O00O00OOO000} / attribute {OOOOOOOO0OOO0.get('name')} has invalid type of maximal length.")
                         O000O00000 = False
                         return O000O00000
         return O000O00000
@@ -1351,12 +1351,12 @@ class cleverminer:
                 O0O0OOO0OO00 = OOO0O000O0.kwargs.get(O0OO00O0O0O0)
                 if OOO0O000O0.verbosity['debug']:
                     print(O0O0OOO0OO00)
-                    print(f'...cedent {O0OO00O0O0O0} is type {O0O0OOO0OO00.get('type')}')
-                    print(f'Will check cedent type {O0OO00O0O0O0} : {O0O0OOO0OO00.get('type')}')
+                    print(f"...cedent {O0OO00O0O0O0} is type {O0O0OOO0OO00.get('type')}")
+                    print(f"Will check cedent type {O0OO00O0O0O0} : {O0O0OOO0OO00.get('type')}")
                 if O0O0OOO0OO00.get('type') != 'con':
                     O00000000OO0O = False
                     if OOO0O000O0.verbosity['debug']:
-                        print(f'Cannot optim due to cedent type {O0OO00O0O0O0} : {O0O0OOO0OO00.get('type')}')
+                        print(f"Cannot optim due to cedent type {O0OO00O0O0O0} : {O0O0OOO0OO00.get('type')}")
             except:
                 OO0OO00O0O = 1 < 2
         if OOO0O000O0.options['optimizations'] == False:
@@ -1498,14 +1498,14 @@ class cleverminer:
         print('')
         print('CleverMiner task processing summary:')
         print('')
-        print(f'Task type : {O000OOOOOO0O.result['taskinfo']['task_type']}')
-        print(f'Number of verifications : {O000OOOOOO0O.result['summary_statistics']['total_verifications']}')
-        print(f'Number of rules : {O000OOOOOO0O.result['summary_statistics']['valid_rules']}')
-        print(f'Total time needed : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_total']))}')
+        print(f"Task type : {O000OOOOOO0O.result['taskinfo']['task_type']}")
+        print(f"Number of verifications : {O000OOOOOO0O.result['summary_statistics']['total_verifications']}")
+        print(f"Number of rules : {O000OOOOOO0O.result['summary_statistics']['valid_rules']}")
+        print(f"Total time needed : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_total']))}")
         if O000OOOOOO0O.verbosity['debug']:
-            print(f'Total time needed : {O000OOOOOO0O.result['summary_statistics']['time_total']}')
-        print(f'Time of data preparation : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_prep']))}')
-        print(f'Time of rule mining : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_processing']))}')
+            print(f"Total time needed : {O000OOOOOO0O.result['summary_statistics']['time_total']}")
+        print(f"Time of data preparation : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_prep']))}")
+        print(f"Time of rule mining : {strftime('%Hh %Mm %Ss', gmtime(O000OOOOOO0O.result['summary_statistics']['time_processing']))}")
         print('')
 
     def print_hypolist(O0000O00O000):
@@ -1551,7 +1551,7 @@ class cleverminer:
                 OO00O0OOO0O = '{:6d}'.format(O000O00OOOOO0['rule_id'])
                 if O00OO00O00O.result['taskinfo']['task_type'] == '4ftMiner':
                     if O00OO00O00O.verbosity['debug']:
-                        print(f'{O000O00OOOOO0['params']}')
+                        print(f"{O000O00OOOOO0['params']}")
                     OO00O0OOO0O = OO00O0OOO0O + ' ' + '{:5d}'.format(O000O00OOOOO0['params']['base']) + ' ' + '{:.3f}'.format(O000O00OOOOO0['params']['conf']) + ' ' + '{:+.3f}'.format(O000O00OOOOO0['params']['aad'])
                     OO00O0OOO0O = OO00O0OOO0O + ' ' + O000O00OOOOO0['cedents_str']['ante'] + ' => ' + O000O00OOOOO0['cedents_str']['succ'] + ' | ' + O000O00OOOOO0['cedents_str']['cond']
                 elif O00OO00O00O.result['taskinfo']['task_type'] == 'UICMiner':
@@ -1586,59 +1586,59 @@ class cleverminer:
             if OO0O0000OOO0.result['taskinfo']['task_type'] == '4ftMiner':
                 print('')
                 OO000OO00OOO = OO0O0000OOO0.result['rules'][rule_id - 1]
-                print(f'Rule id : {OO000OO00OOO['rule_id']}')
+                print(f"Rule id : {OO000OO00OOO['rule_id']}")
                 print('')
-                print(f'Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}  CONF : {'{:.3f}'.format(OO000OO00OOO['params']['conf'])}  AAD : {'{:+.3f}'.format(OO000OO00OOO['params']['aad'])}  BAD : {'{:+.3f}'.format(OO000OO00OOO['params']['bad'])}')
+                print(f"Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}  CONF : {'{:.3f}'.format(OO000OO00OOO['params']['conf'])}  AAD : {'{:+.3f}'.format(OO000OO00OOO['params']['aad'])}  BAD : {'{:+.3f}'.format(OO000OO00OOO['params']['bad'])}")
                 print('')
                 print('Cedents:')
-                print(f'  antecedent : {OO000OO00OOO['cedents_str']['ante']}')
-                print(f'  succcedent : {OO000OO00OOO['cedents_str']['succ']}')
-                print(f'  condition  : {OO000OO00OOO['cedents_str']['cond']}')
+                print(f"  antecedent : {OO000OO00OOO['cedents_str']['ante']}")
+                print(f"  succcedent : {OO000OO00OOO['cedents_str']['succ']}")
+                print(f"  condition  : {OO000OO00OOO['cedents_str']['cond']}")
                 print('')
                 print('Fourfold table')
                 print(f'    |  S  |  ¬S |')
                 print(f'----|-----|-----|')
-                print(f' A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][1])}|')
+                print(f" A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][1])}|")
                 print(f'----|-----|-----|')
-                print(f'¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][3])}|')
+                print(f"¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold'][3])}|")
                 print(f'----|-----|-----|')
             elif OO0O0000OOO0.result['taskinfo']['task_type'] == 'CFMiner':
                 print('')
                 OO000OO00OOO = OO0O0000OOO0.result['rules'][rule_id - 1]
-                print(f'Rule id : {OO000OO00OOO['rule_id']}')
+                print(f"Rule id : {OO000OO00OOO['rule_id']}")
                 print('')
                 O0O00OOOO00 = ''
                 if 'aad' in OO000OO00OOO['params']:
                     O0O00OOOO00 = 'aad : ' + str(OO000OO00OOO['params']['aad'])
-                print(f'Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}  Steps UP (consecutive) : {'{:5d}'.format(OO000OO00OOO['params']['s_up'])}  Steps DOWN (consecutive) : {'{:5d}'.format(OO000OO00OOO['params']['s_down'])}  Steps UP (any) : {'{:5d}'.format(OO000OO00OOO['params']['s_any_up'])}  Steps DOWN (any) : {'{:5d}'.format(OO000OO00OOO['params']['s_any_down'])}  Histogram maximum : {'{:5d}'.format(OO000OO00OOO['params']['max'])}  Histogram minimum : {'{:5d}'.format(OO000OO00OOO['params']['min'])}  Histogram relative maximum : {'{:.3f}'.format(OO000OO00OOO['params']['rel_max'])} Histogram relative minimum : {'{:.3f}'.format(OO000OO00OOO['params']['rel_min'])} {O0O00OOOO00}')
+                print(f"Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}  Steps UP (consecutive) : {'{:5d}'.format(OO000OO00OOO['params']['s_up'])}  Steps DOWN (consecutive) : {'{:5d}'.format(OO000OO00OOO['params']['s_down'])}  Steps UP (any) : {'{:5d}'.format(OO000OO00OOO['params']['s_any_up'])}  Steps DOWN (any) : {'{:5d}'.format(OO000OO00OOO['params']['s_any_down'])}  Histogram maximum : {'{:5d}'.format(OO000OO00OOO['params']['max'])}  Histogram minimum : {'{:5d}'.format(OO000OO00OOO['params']['min'])}  Histogram relative maximum : {'{:.3f}'.format(OO000OO00OOO['params']['rel_max'])} Histogram relative minimum : {'{:.3f}'.format(OO000OO00OOO['params']['rel_min'])} {O0O00OOOO00}")
                 print('')
-                print(f'Condition  : {OO000OO00OOO['cedents_str']['cond']}')
+                print(f"Condition  : {OO000OO00OOO['cedents_str']['cond']}")
                 print('')
                 OO0OO000O00O = OO0O0000OOO0.get_category_names(OO0O0000OOO0.result['taskinfo']['target'])
                 print(f'Categories in target variable  {OO0OO000O00O}')
-                print(f'Histogram                      {OO000OO00OOO['params']['hist']}')
+                print(f"Histogram                      {OO000OO00OOO['params']['hist']}")
                 if 'aad' in OO000OO00OOO['params']:
-                    print(f'Histogram on full set          {OO000OO00OOO['params']['hist_full']}')
-                    print(f'Relative histogram             {OO000OO00OOO['params']['rel_hist']}')
-                    print(f'Relative histogram on full set {OO000OO00OOO['params']['rel_hist_full']}')
+                    print(f"Histogram on full set          {OO000OO00OOO['params']['hist_full']}")
+                    print(f"Relative histogram             {OO000OO00OOO['params']['rel_hist']}")
+                    print(f"Relative histogram on full set {OO000OO00OOO['params']['rel_hist_full']}")
             elif OO0O0000OOO0.result['taskinfo']['task_type'] == 'UICMiner':
                 print('')
                 OO000OO00OOO = OO0O0000OOO0.result['rules'][rule_id - 1]
-                print(f'Rule id : {OO000OO00OOO['rule_id']}')
+                print(f"Rule id : {OO000OO00OOO['rule_id']}")
                 print('')
                 O0O00OOOO00 = ''
                 if 'aad_score' in OO000OO00OOO['params']:
                     O0O00OOOO00 = 'aad score : ' + str(OO000OO00OOO['params']['aad_score'])
-                print(f'Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}   {O0O00OOOO00}')
+                print(f"Base : {'{:5d}'.format(OO000OO00OOO['params']['base'])}  Relative base : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base'])}   {O0O00OOOO00}")
                 print('')
-                print(f'Condition  : {OO000OO00OOO['cedents_str']['cond']}')
-                print(f'Antecedent : {OO000OO00OOO['cedents_str']['ante']}')
+                print(f"Condition  : {OO000OO00OOO['cedents_str']['cond']}")
+                print(f"Antecedent : {OO000OO00OOO['cedents_str']['ante']}")
                 print('')
-                print(f'Histogram                                        {OO000OO00OOO['params']['hist']}')
+                print(f"Histogram                                        {OO000OO00OOO['params']['hist']}")
                 if 'aad_score' in OO000OO00OOO['params']:
-                    print(f'Histogram on full set with condition             {OO000OO00OOO['params']['hist_cond']}')
-                    print(f'Relative histogram                               {OO000OO00OOO['params']['rel_hist']}')
-                    print(f'Relative histogram on full set with condition    {OO000OO00OOO['params']['rel_hist_cond']}')
+                    print(f"Histogram on full set with condition             {OO000OO00OOO['params']['hist_cond']}")
+                    print(f"Relative histogram                               {OO000OO00OOO['params']['rel_hist']}")
+                    print(f"Relative histogram on full set with condition    {OO000OO00OOO['params']['rel_hist_cond']}")
                 OOO000OO00OOO = OO0O0000OOO0.result['datalabels']['catnames'][OO0O0000OOO0.result['datalabels']['varname'].index(OO0O0000OOO0.result['taskinfo']['target'])]
                 print(' ')
                 print('Interpretation:')
@@ -1649,27 +1649,27 @@ class cleverminer:
                     OOO0O00O0OO0O = ''
                     if not OO000OO00OOO['cedents_str']['cond'] == '---':
                         OOO0O00O0OO0O = 'For ' + OO000OO00OOO['cedents_str']['cond'] + ': '
-                    print(f'    {OOO0O00O0OO0O}{OO0O0000OOO0.result['taskinfo']['target']}({OOO000OO00OOO[OOOOOOOOO00O]}) has occurence {'{:.1%}'.format(OO000OO00OOO['params']['rel_hist_cond'][OOOOOOOOO00O])}, with antecedent it has occurence {'{:.1%}'.format(OO000OO00OOO['params']['rel_hist'][OOOOOOOOO00O])}, that is {'{:.3f}'.format(O0OO0O000OO0)} times more.')
+                    print(f"    {OOO0O00O0OO0O}{OO0O0000OOO0.result['taskinfo']['target']}({OOO000OO00OOO[OOOOOOOOO00O]}) has occurence {'{:.1%}'.format(OO000OO00OOO['params']['rel_hist_cond'][OOOOOOOOO00O])}, with antecedent it has occurence {'{:.1%}'.format(OO000OO00OOO['params']['rel_hist'][OOOOOOOOO00O])}, that is {'{:.3f}'.format(O0OO0O000OO0)} times more.")
             elif OO0O0000OOO0.result['taskinfo']['task_type'] == 'SD4ftMiner':
                 print('')
                 OO000OO00OOO = OO0O0000OOO0.result['rules'][rule_id - 1]
-                print(f'Rule id : {OO000OO00OOO['rule_id']}')
+                print(f"Rule id : {OO000OO00OOO['rule_id']}")
                 print('')
-                print(f'Base1 : {'{:5d}'.format(OO000OO00OOO['params']['base1'])} Base2 : {'{:5d}'.format(OO000OO00OOO['params']['base2'])}  Relative base 1 : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base1'])} Relative base 2 : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base2'])} CONF1 : {'{:.3f}'.format(OO000OO00OOO['params']['conf1'])}  CONF2 : {'{:+.3f}'.format(OO000OO00OOO['params']['conf2'])}  Delta Conf : {'{:+.3f}'.format(OO000OO00OOO['params']['deltaconf'])} Ratio Conf : {'{:+.3f}'.format(OO000OO00OOO['params']['ratioconf'])}')
+                print(f"Base1 : {'{:5d}'.format(OO000OO00OOO['params']['base1'])} Base2 : {'{:5d}'.format(OO000OO00OOO['params']['base2'])}  Relative base 1 : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base1'])} Relative base 2 : {'{:.3f}'.format(OO000OO00OOO['params']['rel_base2'])} CONF1 : {'{:.3f}'.format(OO000OO00OOO['params']['conf1'])}  CONF2 : {'{:+.3f}'.format(OO000OO00OOO['params']['conf2'])}  Delta Conf : {'{:+.3f}'.format(OO000OO00OOO['params']['deltaconf'])} Ratio Conf : {'{:+.3f}'.format(OO000OO00OOO['params']['ratioconf'])}")
                 print('')
                 print('Cedents:')
-                print(f'  antecedent : {OO000OO00OOO['cedents_str']['ante']}')
-                print(f'  succcedent : {OO000OO00OOO['cedents_str']['succ']}')
-                print(f'  condition  : {OO000OO00OOO['cedents_str']['cond']}')
-                print(f'  first set  : {OO000OO00OOO['cedents_str']['frst']}')
-                print(f'  second set : {OO000OO00OOO['cedents_str']['scnd']}')
+                print(f"  antecedent : {OO000OO00OOO['cedents_str']['ante']}")
+                print(f"  succcedent : {OO000OO00OOO['cedents_str']['succ']}")
+                print(f"  condition  : {OO000OO00OOO['cedents_str']['cond']}")
+                print(f"  first set  : {OO000OO00OOO['cedents_str']['frst']}")
+                print(f"  second set : {OO000OO00OOO['cedents_str']['scnd']}")
                 print('')
                 print('Fourfold tables:')
                 print(f'FRST|  S  |  ¬S |  SCND|  S  |  ¬S |')
                 print(f'----|-----|-----|  ----|-----|-----| ')
-                print(f' A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][1])}|   A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][1])}|')
+                print(f" A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][1])}|   A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][0])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][1])}|")
                 print(f'----|-----|-----|  ----|-----|-----|')
-                print(f'¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][3])}|  ¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][3])}|')
+                print(f"¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold1'][3])}|  ¬A  |{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][2])}|{'{:5d}'.format(OO000OO00OOO['params']['fourfold2'][3])}|")
                 print(f'----|-----|-----|  ----|-----|-----|')
             else:
                 print('Unsupported task type for rule details')
@@ -2112,7 +2112,7 @@ class cleverminer:
                 O00O000000 = pickle.load(O0OO00OOOOO)
                 OO00O00OOO.data = O00O000000['data']
                 OO00O00OOO.df = O00O000000['df']
-                print(f'...data loaded from file {OO0O0OOO00['datafile']}.')
+                print(f"...data loaded from file {OO0O0OOO00['datafile']}.")
             except:
                 print(f'Error loading saved file. Linked data file does not exists or it is in incorrect structure or path. If you are transferring saved file to another computer, please embed also data.')
                 exit(1)
